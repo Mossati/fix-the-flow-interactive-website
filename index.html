@@ -89,11 +89,11 @@
             <section class="text-container section-contact" id="contact">
                 <h2>Wij houden van korte lijntjes, jij toch ook?</h2>
                 <h3>Kom met ons in gesprek om de mogelijkheden van b-RAIN te bespreken door een mail te sturen naar info@b-rain.nl</h3>
-                <form>
+                <form class="form">
                     <label for="mail">E-Mail</label>
-                    <input name="mail" id="mail" placeholder="e-mail..." required>
+                    <input type="email" name="mail" id="mail" placeholder="e-mail..." required>
                     <label for="subject">Onderwerp</label>
-                    <input name="subject" id="subject" placeholder="onderwerp..." required>
+                    <input type="text" name="subject" id="subject" placeholder="onderwerp..." required>
                     <label for="message">Bericht</label>
                     <textarea name="message" id="message" placeholder="message..." maxlength="200" required></textarea>
                     <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Verzenden</button>
@@ -116,18 +116,48 @@
 
             <section class="text-container">
                 <h2 class="heading-info">Artikelen</h2>
-                <form class="form-article">
+                <div class="form search-article">
                     <input type="text" id="search" name="search" placeholder="zoek naar artikel...">
-                    <input type="submit" id="btn-search" class="btn" value="Zoeken">
-                </form>
+                    <p class="results">Resultaten</p>
+                </div>
                 <div class="carousel-container">
                     <button class="btn btn-arrow-left" id="btn-arrow-left" name="btn-arrow-left"><i class="fa-solid fa-arrow-left"></i></button>
                     <div class="carousel" id="carousel">
-                        <img src="./assets/img1.png" alt="artikel-1" id="artikel-1" class="slide-img">
-                        <img src="./assets/img2.png" alt="artikel-2" id="artikel-2" class="slide-img">
-                        <img src="./assets/img3.png" alt="artikel-3" id="artikel-3" class="slide-img">
-                        <img src="./assets/img4.png" alt="artikel-4" id="artikel-4" class="slide-img">
-                        <p id="test"></p>
+
+                        <div class="img-card">
+                            <img src="./assets/img1.png" alt="artikel-1">
+                            <div class="card-text">
+                                <p>Klimaatadaptatie</p>
+                                <h3>Gemeente Amstelveen</h3>
+                                <p class="card-description">
+                                    Gemeente Amstelveen heeft SPATwater gevraagd om op een innovatieve, creatieve en inclusieve manier elke inwoner van Amstelveen een persoonlijk en op maat gemaakt klimaatadaptief advies te geven.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="img-card">
+                            <img src="./assets/img2.png" alt="artikel-2">
+                            <div class="card-text">
+                                <p>Klimaatadaptatie</p>
+                                <h3>Gemeente Amsterdam</h3>
+                                <p class="card-description">
+                                    Begin 2022 introduceerde Waternet vanuit Amsterdam Rainproof de Rainproof Coaches. In dit project is vanuit een wateroverlast knelpunt gekeken hoe de private ruimte klimaatadaptief ingericht kan worden.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="img-card">
+                            <img src="./assets/img3.png" alt="artikel-3">
+                            <div class="card-text">
+                                <p>Klimaatadaptatie</p>
+                                <h3>Vergroenjewerk.nl</h3>
+                                <p class="card-description">
+                                    SPATwater heeft met hulp van studenten van de MSc MADE, Green Business Club, Samen Klimaatbestendig, Waternet en de gemeente amsterdam de online tool vergroenjewerk.nl ontwikkeld. De tool is bruikbaar voor elke werknemer die de werkomgeving wil vergroenen.
+                                </p>
+                            </div>
+                        </div>
+
+
                     </div>
                     <button class="btn btn-arrow-right" id="btn-arrow-right" name="btn-arrow-right"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>

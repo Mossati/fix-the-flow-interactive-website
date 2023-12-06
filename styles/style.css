@@ -309,40 +309,67 @@ nav {
     & .carousel {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         overflow: hidden;
-        width: 100%;
+        width: var(--percentage-size-100);
     
-        & img {
-            border-radius: var(--border-size-0-5);
+        & .img-card {
+            display: none;
             margin: var(--margin-1);
-            width: 100%;
-            height: auto;
+            width: var(--percentage-size-50);
+            overflow: hidden;
+            border-radius: var(--border-size-0-5);
+            box-shadow: var(--box-shadow);
+
+            & img {
+                border-top-right-radius: var(--border-size-0-5);
+                border-top-left-radius: var(--border-size-0-5);
+                width: var(--percentage-size-100);
+                height: auto;
+            }
+
+            & .card-text {
+                padding: var(--padding-1);
+
+                & .card-description {
+                    display: none;
+                }
+            }
+        }
+
+        & .active-slide {
+            display: block;
         }
     
         & .btn-arrow-left {
             position: absolute;
-            top: 50%;
+            top: var(--percentage-size-50);
             left: 1em;
         }
     
         & .btn-arrow-right {
             position: absolute;
-            top: 50%;
+            top: var(--percentage-size-50);
             right: 1em;
         }
     }
 }
 
-.form-article {
+.search-article {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: var(--margin-1);
 
-    & input[type=submit] {
-        margin-left: var(--margin-0-5);
-        padding: var(--padding-0-5);
-        border-radius: var(--border-size-0-5);
+    & #search {
+        width: var(--percentage-size-25);
+        margin-bottom: 0;
+    }
+
+    & .results {
+        font-weight: 600;
+        margin-left: var(--margin-1);
     }
 }
 
@@ -365,6 +392,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-1-4);
+    color: var(--heading-1-color);
 }
 
 .heading-info {
@@ -380,7 +408,7 @@ h3 {
 }
 
 /* form */
-form {
+.form {
     & label {
         display: block;
         margin-bottom: var(--margin-0-5);
@@ -390,7 +418,7 @@ form {
         margin-top: var(--margin-1);
     }
 
-    & input, textarea {
+    & input[type=text], input[type=email], textarea {
         display: block;
         width: 100%;
         border-radius: var(--border-size-0-5);
@@ -405,7 +433,7 @@ form {
         resize: none;
     }
 
-    & input:focus, textarea:focus {
+    & input[type=text]:focus, input[type=email]:focus, textarea:focus {
         border: 0.2em solid var(--btn-color);
     }
 }
