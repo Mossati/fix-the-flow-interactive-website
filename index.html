@@ -115,18 +115,21 @@
             </section>
 
             <section class="text-container">
-                <h2 class="heading-info">Foto's</h2>
-                <div class="carousel">
-                    <div class="card">
-                        <img src="./assets/img1.png" alt="img1">
-                        <div>
-                            <p>Titel</p>
-                            <p>text</p>
-                        </div>
+                <h2 class="heading-info">Artikelen</h2>
+                <form class="form-article">
+                    <input type="text" id="search" name="search" placeholder="zoek naar artikel...">
+                    <input type="submit" id="btn-search" class="btn" value="Zoeken">
+                </form>
+                <div class="carousel-container">
+                    <button class="btn btn-arrow-left" id="btn-arrow-left" name="btn-arrow-left"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="carousel" id="carousel">
+                        <img src="./assets/img1.png" alt="artikel-1" id="artikel-1" class="slide-img">
+                        <img src="./assets/img2.png" alt="artikel-2" id="artikel-2" class="slide-img">
+                        <img src="./assets/img3.png" alt="artikel-3" id="artikel-3" class="slide-img">
+                        <img src="./assets/img4.png" alt="artikel-4" id="artikel-4" class="slide-img">
+                        <p id="test"></p>
                     </div>
-                    <div><img src="./assets/img2.png" alt="img2"></div>
-                    <div><img src="./assets/img3.png" alt="img3"></div>
-                    <div><img src="./assets/img4.png" alt="img4"></div>
+                    <button class="btn btn-arrow-right" id="btn-arrow-right" name="btn-arrow-right"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </section>
 

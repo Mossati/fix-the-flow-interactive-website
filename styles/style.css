@@ -300,31 +300,49 @@ nav {
     margin-bottom: var(--margin-1);
 }
 
-.carousel {
-    display: none;
-    scroll-snap-type: x mandatory;
+.carousel-container {
+    display: flex;
     flex-direction: row;
-    overflow-x: scroll;
-
-    & .card {
-        width: 20em;
-        height: 20em;
-        margin-right: var(--margin-1);
-        scroll-snap-align: start;
-
+    align-items: center;
+    position: relative;
+    
+    & .carousel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+    
         & img {
-            width: var(--percentage-size-100);
+            border-radius: var(--border-size-0-5);
+            margin: var(--margin-1);
+            width: 100%;
             height: auto;
-            border-radius: var(--border-size-1);
-            position: relative;
         }
-
-        & div {
+    
+        & .btn-arrow-left {
             position: absolute;
-            bottom: 1em;
+            top: 50%;
             left: 1em;
-            z-index: 99;
         }
+    
+        & .btn-arrow-right {
+            position: absolute;
+            top: 50%;
+            right: 1em;
+        }
+    }
+}
+
+.form-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & input[type=submit] {
+        margin-left: var(--margin-0-5);
+        padding: var(--padding-0-5);
+        border-radius: var(--border-size-0-5);
     }
 }
 
