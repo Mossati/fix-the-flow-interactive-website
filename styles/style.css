@@ -371,6 +371,10 @@ nav {
         font-weight: 600;
         margin-left: var(--margin-1);
     }
+
+    .btn-search {
+        margin-left: var(--margin-1);
+    }
 }
 
 /* headings */

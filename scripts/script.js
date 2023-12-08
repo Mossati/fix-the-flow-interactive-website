@@ -51,6 +51,7 @@ showSlides(slideIndex);
 //maak 2 variablen voor de buttons van de carousel
 var btnLeft = document.querySelector(".btn-arrow-left");
 var btnRight = document.querySelector(".btn-arrow-right");
+var btnSearch = document.querySelector(".btn-search");
 
 //linker button als je erop klikt telt hij plus 1 op en die geeft hij mee aan showSlides als argument
 btnLeft.addEventListener("click", function() {
@@ -60,6 +61,10 @@ btnLeft.addEventListener("click", function() {
 //rechter button als je erop klikt haalt hij min 1 er af en die geeft hij mee aan showSlides als argument
 btnRight.addEventListener("click", function() {
   showSlides(+1);
+});
+
+btnSearch.addEventListener("click", function() {
+  showSlides(slideIndex);
 });
 
 function showSlides(n) {
