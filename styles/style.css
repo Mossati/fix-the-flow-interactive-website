@@ -176,6 +176,7 @@ nav {
     left: 0;
     width: var(--percentage-size-100);
     transition: .4s ease;
+    z-index: 9999;
 
     & .nav-bar {
         display: flex;
