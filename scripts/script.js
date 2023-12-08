@@ -44,7 +44,7 @@ window.addEventListener("scroll", function() {
 //Slideshow met filter
 //==================================================
 //variable voor slideIndex die op 0 staat
-let slideIndex = 0;
+var slideIndex = 0;
 //run de function showSlides en geef slideIndex mee als argument
 showSlides(slideIndex);
 
@@ -91,8 +91,8 @@ function showSlides(n) {
 
   //check of de input leeg of niet leeg is loop dan door de cards heen
   if (inputSearch !== "") {
-    for (let i = 0; i < cards.length; i++) {
-      let cardContent = cards[i].querySelector(".card-text").textContent.toLowerCase();
+    for (var i = 0; i < cards.length; i++) {
+      var cardContent = cards[i].querySelector(".card-text").textContent.toLowerCase();
 
       if (cardContent.includes(inputSearch)) {
         if (i === slideIndex) {
