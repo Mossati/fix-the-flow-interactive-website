@@ -15,7 +15,7 @@ var navBar = document.getElementById("nav-bar");
 
 window.addEventListener("scroll", function() {
   if (window.scrollY > 100) {
-      navBar.style.position = "sticky";
+      navBar.style.position = "fixed";
   } else {
       navBar.style.position = "absolute";
   }
