@@ -73,6 +73,7 @@ function showSlides(n) {
   var inputSearch = document.querySelector("#search").value.toLowerCase();
   var cards = document.querySelectorAll(".img-card");
   var results = document.querySelector(".results");
+  var dotsCarousel = document.querySelector(".carousel-dots");
 
   var resultCount = 0;
 
@@ -94,7 +95,20 @@ function showSlides(n) {
     for (var i = 0; i < cards.length; i++) {
       var cardContent = cards[i].querySelector(".card-text").textContent.toLowerCase();
 
+      //carousel dots
+      if (i <= cards.length) {
+        var dots = document.createElement("div");
+        if (i === slideIndex){
+          dots.classList.add("dot-active");
+        }else {
+          dots.classList.add("dot");
+        }
+        dotsCarousel.appendChild(dots);
+      }
+
+      //carousel slides
       if (cardContent.includes(inputSearch)) {
+        slideIndex += i;
         if (i === slideIndex) {
           slides[i].classList.add("active-slide");
         } else {
@@ -108,6 +122,18 @@ function showSlides(n) {
     results.innerHTML = "Resultaten: " + resultCount;
   } else {
     for (var i = 0; i < slides.length; i++) {
+
+      console.log(i);
+      if (i <= slides.length) {
+        var dots = document.createElement("div");
+        if (i === slideIndex){
+          dots.classList.add("dot-active");
+        }else {
+          dots.classList.add("dot");
+        }
+        dotsCarousel.appendChild(dots);
+      }
+
       if (i === slideIndex) {
         slides[i].classList.add("active-slide");
       } else {

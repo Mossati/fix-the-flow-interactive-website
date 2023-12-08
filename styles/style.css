@@ -314,14 +314,18 @@ nav {
         align-items: center;
         overflow: hidden;
         width: var(--percentage-size-100);
+        background-color: brown;
     
         & .img-card {
+            background-color: var(--background-color);
             display: none;
-            margin: var(--margin-1);
+            /* margin: var(--margin-1); */
+            margin-left: -100em;
             width: var(--percentage-size-50);
             overflow: hidden;
             border-radius: var(--border-size-0-5);
             box-shadow: var(--box-shadow);
+            transition: .4s ease;
 
             & img {
                 border-top-right-radius: var(--border-size-0-5);
@@ -341,6 +345,7 @@ nav {
 
         & .active-slide {
             display: block;
+            margin-left: 0;
         }
     
         & .btn-arrow-left {
@@ -354,6 +359,31 @@ nav {
             top: var(--percentage-size-50);
             right: 1em;
         }
+    }
+}
+
+.carousel-dots {
+    padding: var(--padding-1);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    & .dot {
+        background-color: var(--heading-1-color);
+        padding: var(--padding-0-5);
+        margin: var(--margin-1);
+        border-radius: var(--border-size-0-5);
+    }
+
+    & .dot-active {
+        background-color: var(--btn-color);
+        padding: var(--padding-0-5);
+        margin: var(--margin-1);
+        border-radius: var(--border-size-0-5);
     }
 }
 
