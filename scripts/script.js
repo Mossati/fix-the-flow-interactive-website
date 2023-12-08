@@ -89,7 +89,7 @@ function showSlides(n) {
     slideIndex = 0;
   }
 
-  //maak een for loop die net zo vaak blijft loopen als de item in slides, als i gelijk is aan slideIndex laat die afbeelding dan zien
+  //check of de input leeg of niet leeg is loop dan door de cards heen
   if (inputSearch !== "") {
     for (let i = 0; i < cards.length; i++) {
       let cardContent = cards[i].querySelector(".card-text").textContent.toLowerCase();
