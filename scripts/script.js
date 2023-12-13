@@ -135,8 +135,10 @@ function showSlides(n) {
       }
 
       if (i === slideIndex) {
+        slides[i].style.marginLeft = "20em";
         slides[i].classList.add("active-slide");
       } else {
+        slides[i].style.marginLeft = "0";
         slides[i].classList.remove("active-slide");
       }
     }
