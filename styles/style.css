@@ -319,6 +319,8 @@ nav {
             background-color: var(--background-color);
             display: none;
             width: var(--percentage-size-50);
+            margin-bottom: var(--margin-1);
+            margin-top: var(--margin-1);
             overflow: hidden;
             border-radius: var(--border-size-0-5);
             box-shadow: var(--box-shadow);
@@ -335,7 +337,7 @@ nav {
                 padding: var(--padding-1);
 
                 & .card-description {
-                    display: none;
+                    /* display: none; */
                 }
             }
         }
