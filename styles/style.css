@@ -335,6 +335,8 @@ nav {
 
             & .card-text {
                 padding: var(--padding-1);
+                height: 15em;
+                overflow-y: scroll;
 
                 & .card-description {
                     /* display: none; */
