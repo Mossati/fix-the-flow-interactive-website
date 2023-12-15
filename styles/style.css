@@ -314,13 +314,10 @@ nav {
         align-items: center;
         overflow: hidden;
         width: var(--percentage-size-100);
-        /* background-color: brown; */
     
         & .img-card {
             background-color: var(--background-color);
             display: none;
-            /* margin: var(--margin-1); */
-            margin-left: -100em;
             width: var(--percentage-size-50);
             overflow: hidden;
             border-radius: var(--border-size-0-5);
@@ -345,7 +342,7 @@ nav {
 
         & .active-slide {
             display: block;
-            margin-left: 0;
+            animation: active-slide .8s ease forwards;
         }
     
         & .btn-arrow-left {
@@ -617,4 +614,9 @@ footer {
 @keyframes rain {
     from {background-position: 0 0;}
     to {background-position: 0 100%;}
+}
+
+@keyframes active-slide {
+    from {margin-left: -100em;}
+    to {margin-left: 0;}
 }
