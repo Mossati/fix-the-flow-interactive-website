@@ -314,7 +314,7 @@ nav {
         align-items: center;
         overflow: hidden;
         width: var(--percentage-size-100);
-        background-color: brown;
+        /* background-color: brown; */
     
         & .img-card {
             background-color: var(--background-color);
