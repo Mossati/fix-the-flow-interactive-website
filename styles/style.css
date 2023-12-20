@@ -260,6 +260,10 @@ nav {
     border-radius: var(--border-size-1);
     padding: var(--padding-1);
     box-shadow: var(--box-shadow);
+
+    & p {
+        /* width: 30em; */
+    }
 }
 
 .section-flex {
